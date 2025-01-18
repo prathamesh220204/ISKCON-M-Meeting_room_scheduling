@@ -75,7 +75,9 @@ a {
     margin: 0;
     letter-spacing: 1.5px;
     color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); */
+    text-shadow: 0 0 5px black, /* Gray blurred shadow */
+               0 0 10px black; /* Additional softer shadow */
     line-height: 1.2;
 }
 
@@ -91,8 +93,27 @@ a {
   z-index: 10;
   margin-top: -90px; 
   }
+
+  .Hero-btn-container{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+  }
   
-  
+  .Hero-btns{
+    
+    background-color: #4a148c;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 25px;
+    cursor: pointer;
+  }
+
+  .Hero-btns:hover{
+    background-color:#3a2271;
+  }
+
+
   .btn-lg {
     font-size: 16px;
     width: 100%;
@@ -122,7 +143,7 @@ a {
     font-size: 16px;
     border: none;
     cursor: pointer;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 2px 8px 8px rgba(0, 0, 0, 0.1);
     transition: all 0.2s ease;
 }
 
@@ -140,7 +161,7 @@ a {
     align-items: center;
     padding: 10px 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
+    background-color: #2d2f31;
 }
 
 .logo {
@@ -156,13 +177,14 @@ a {
 .navbar-title h3 {
     margin: 0;
     font-size: 18px;
+    color: #ffffff;
     font-weight: bold;
 }
 
 .navbar-title p {
     margin: 0;
     font-size: 14px;
-    color: #555;
+    color: #ffffff;
 }
 
 .nav-links {
@@ -173,7 +195,7 @@ a {
 
 .nav-btn {
     text-decoration: none;
-    color: #333;
+    color: #ffffff;
     padding: 8px 16px;
     transition: all 0.3s ease;
 }
@@ -193,12 +215,14 @@ a {
     right: 30px;
     top: 50%;
     transform: translateY(-50%);
+    z-index: 999;
 }
 
 /* Mobile styles */
 @media screen and (max-width: 768px) {
     .hamburger {
         display: block;
+        color: black;
     }
 
     .nav-links {
@@ -274,20 +298,22 @@ a {
     border-radius: 10px;
 }
 
+
+
 .button {
-    background-color: #6b46c1; /* Purple color */
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 25px; /* Rounded corners */
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); /* Shadow effect */
-  }
+    background-color: #3a2271; 
+   border: none;
+   color: white;
+   padding: 15px 32px;
+   text-align: center;
+   text-decoration: none;
+   /* display: inline-block; */
+   font-size: 16px;
+   margin: 4px 2px;
+   cursor: pointer;
+   border-radius: 25px; /* Rounded corners */
+   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); /* Shadow effect */
+ }
 
 
 .content {
@@ -350,7 +376,7 @@ h1 {
     padding: 6px;
     background-color: #6b46c1;
     color: white;
-    padding: 15px 32px;
+    padding: 5px 12px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -674,258 +700,8 @@ h1 {
 
 
 /* Pages styling */
-/* contact us */
-.daddy {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f9f9f9;
-    color: #333;
-    padding: 20px;
-  }
 
-  #time {
-    max-width: 1200px;
-    margin: 20px auto;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-
-  h2 {
-    font-size: 1.8rem;
-    color: #4a2a84;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-
-  .contact-section {
-    margin-bottom: 20px;
-  }
-
-  .contact-section h3 {
-    font-size: 1.4rem;
-    color: #4a2a84;
-    margin-bottom: 10px;
-  }
-
-  .contact-section p {
-    font-size: 1rem;
-    color: #333;
-    margin: 5px 0;
-  }
-
-  .contact-section a {
-    color: #4a2a84;
-    text-decoration: none;
-  }
-
-  .contact-section a:hover {
-    text-decoration: underline;
-  }
-
-  /* Map Container Styling */
-  .map-container {
-    text-align: center;
-    margin: 20px auto;
-    padding: 20px;
-    max-width: 1200px;
-    background-color: #e0f7fa;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-
-  .map-container iframe {
-    width: 100%;
-    height: 500px;
-    border: none;
-    border-radius: 8px;
-  }
-
-  .map-container h2 {
-    font-size: 1.8rem;
-    color: #4a2a84;
-    margin-bottom: 10px;
-  }
-
-  /*get in touch */
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f9f9f9;
-  }
-
-  .container-contact {
-    max-width: 800px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-
-  h2 {
-    text-align: center;
-    color: #4a2a84;
-    margin-bottom: 20px;
-  }
-
-  .form-group {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 15px;
-  }
-
-  .form-group input[type="text"],
-  .form-group input[type="email"],
-  .form-group input[type="tel"],
-  textarea {
-    flex: 1;
-    padding: 10px;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-right: 10px;
-    box-sizing: border-box;
-  }
-
-  .form-group input[type="text"]:last-child,
-  .form-group input[type="email"]:last-child {
-    margin-right: 0;
-  }
-
-  textarea {
-    width: 100%;
-    height: 100px;
-  }
-
-  .checkbox-group {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-  }
-
-  .checkbox-group input[type="checkbox"] {
-    margin-right: 10px;
-  }
-
-  .checkbox-group label {
-    font-size: 0.9rem;
-    color: #555;
-  }
-
-  .btn {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    font-size: 1rem;
-    color: #fff;
-    background-color: #4a2a84;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-align: center;
-  }
-
-  .btn:hover {
-    background-color: #3a2271;
-  }
-
-  /* login page */
   
-body.login-body {
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    /* padding-top: 300px; */
-  }
-  
-  .login {
-    background: #fff;
-    padding: 20px 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-  }
-  
-  .login-form label {
-    font-size: 14px;
-    margin-bottom: 8px;
-    display: block;
-    color: #333;
-  }
-  
-  .login-form input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 14px;
-  }
-  
-  .next-button {
-    width: 100%;
-    background-color: #6a1b9a;
-    color: #fff;
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-  }
-  
-  .next-button:hover {
-    background-color: #4a148c;
-  }
-  
-  .links {
-    display: flex;
-    justify-content: space-between;
-    margin: 10px 0;
-  }
-  
-  .links a {
-    font-size: 12px;
-    text-decoration: none;
-    color: #6a1b9a;
-  }
-  
-  .links a:hover {
-    text-decoration: underline;
-  }
-  
-  .separator {
-    text-align: center;
-    margin: 15px 0;
-    color: #aaa;
-    font-size: 14px;
-  }
-  
-  .google-login {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #fff;
-    cursor: pointer;
-  }
-  
-  .google-login:hover {
-    background-color: #f0f0f0;
-  }
-
-
-
   /* about us */
   .custom-navbar-wrapper {
     display: flex;
