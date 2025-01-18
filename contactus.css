@@ -1,0 +1,217 @@
+.hero {
+  height: 350px;
+  width: 100%;
+  margin-top: auto;
+  margin-bottom: 65px;
+
+}
+
+.hero::before {
+  content: ""; /* Necessary to make the pseudo-element visible */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); /* Blackish fade */
+  z-index: 1; /* Ensures it overlays the image */
+}
+
+.hero::after {
+  content: ""; 
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30%; /* Adjust height for the fade area */
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.), rgba(255, 255, 255, 0)); /* Whitish fade */
+  z-index: 2; 
+}
+
+.title-text {
+  position: relative;
+  padding-top: 300px;
+  z-index: 50;
+}
+
+.contact-us1 {
+  color: #4a2a84;
+  font-weight: 550;
+  font-family: Arial, Helvetica, sans-serif;
+  text-shadow: 0 0 2px #ffffff,
+    0 0 10px #ffffff;
+    z-index: 50;
+}
+
+.daddy {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+  padding: 20px;
+}
+
+#time {
+  max-width: 1200px;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  font-size: 1.8rem;
+  color: #4a2a84;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.contact-section {
+  background-color: lightslategray;
+  border-radius: 5px;
+  padding: 15px;
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px 5px grey;
+}
+
+.contact-section h3 {
+  font-size: 1.4rem;
+  color: #3a2271;
+  margin-bottom: 10px;
+}
+
+.contact-section p {
+  font-size: 1rem;
+  color: #ffffff;
+  margin: 5px 0;
+}
+
+.connect:hover {
+  color: black;
+}
+
+.contact-section a {
+  color: #4a2a84;
+  text-decoration: none;
+}
+
+.connect {
+  cursor: pointer;
+}
+
+.contact-section a:hover {
+  text-decoration: underline;
+}
+
+/* Map Container Styling */
+.map-container {
+  text-align: center;
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 1200px;
+  background-color: #e0f7fa;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 500px;
+  border: none;
+  border-radius: 8px;
+}
+
+.map-container h2 {
+  font-size: 1.8rem;
+  color: #4a2a84;
+  margin-bottom: 10px;
+}
+
+/*get in touch */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+.container-contact {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  color: #4a2a84;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+textarea {
+  flex: 1;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+  box-sizing: border-box;
+}
+
+.form-group input[type="text"]:last-child,
+.form-group input[type="email"]:last-child {
+  margin-right: 0;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.checkbox-group input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.checkbox-group label {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #4a2a84;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.btn:hover {
+  background-color: #3a2271;
+  color: #fff;
+}
+

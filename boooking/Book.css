@@ -1,0 +1,792 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, sans-serif;
+  }
+  
+  body {
+    background: #FFFFFF;
+  }
+  
+  /* Header styles */
+  .header {
+    height: 80px;
+    border-bottom: 1px solid #E5E7EB;
+    background: #FFFFFF;
+  }
+  
+  .header-content {
+    /* max-width: 1440px; */
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 48px;
+  }
+  
+  .logo {
+    width: auto;
+    height: 45px;
+  }
+  
+  .search-container {
+    flex: 1;
+    max-width: 720px;
+    position: relative;
+  }
+  
+  .search-wrapper {
+    position: relative;
+    width: 100%;
+  }
+  
+  .search-icon {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #9CA3AF;
+    width: 20px;
+    height: 20px;
+  }
+  
+  .search-input {
+    width: 100%;
+    height: 44px;
+    padding: 0 16px 0 48px;
+    background: #F3F4F6;
+    border: 1px solid #E5E7EB;
+    border-radius: 6px;
+    font-size: 16px;
+    color: #1F2937;
+  }
+  
+  .search-input::placeholder {
+    color: #9CA3AF;
+  }
+  
+  .location-text {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #4B5563;
+    font-size: 16px;
+  }
+  
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .hamburger-icon {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .nav-link {
+    font-size: 16px;
+    font-weight: 500;
+    color: #1F2937;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  
+  .nav-link:hover {
+    color: #463AA1;
+  }
+  
+  .mobile-menu-button {
+    display: none;
+  }
+  
+  /* Sub header with breadcrumbs */
+  .sub-header {
+    height: 64px;
+    border-bottom: 1px solid #E5E7EB;
+    background: #FFFFFF;
+  }
+  
+  .breadcrumb-container {
+    /* max-width: 1440px; */
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .breadcrumb-link {
+    color: #6B7280;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .breadcrumb-link:hover {
+    color: #463AA1;
+  }
+  
+  .separator {
+    color: #6B7280;
+    font-size: 14px;
+  }
+  
+  .breadcrumb-current {
+    color: #1F2937;
+    font-size: 14px;
+  }
+  
+  .main-mandir-link {
+    color: #1F2937;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  .main-mandir-link:hover {
+    color: #463AA1;
+  }
+  
+  /* Main content area */
+  .main-content {
+    max-width: 1440px;
+    padding: 24px;
+  }
+  
+  .halls-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  
+  .hall-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+  
+  /* Image Section */
+  .image-section {
+    padding: 8px;
+    background: #f9fafb;
+  }
+  
+  .main-image-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 8px;
+  }
+  
+  .main-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .play-button {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .play-button:hover {
+    background: rgba(0, 0, 0, 0.4);
+  }
+  
+  .play-icon {
+    width: 36px;
+    height: 36px;
+    color: #FFFFFF;
+  }
+  
+  .small-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    height: 80px;
+  }
+  
+  .small-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+  }
+  
+  .small-image-wrapper {
+    position: relative;
+  }
+  
+  .see-all-button {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 6px;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  
+  /* Content Section */
+  .hall-info {
+    padding: 16px;
+    border-top: 1px solid #eee;
+  }
+  
+  .hall-name {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1F2937;
+    margin-bottom: 12px;
+  }
+  
+  .capacity,
+  .facilities,
+  .location {
+    color: #4B5563;
+    font-size: 13px;
+    line-height: 1.4;
+    margin-bottom: 6px;
+  }
+  
+  .action-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 16px;
+  }
+  
+  .see-images-btn,
+  .enquire-btn {
+    padding: 6px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .see-images-btn {
+    background: #463AA1;
+    color: #FFFFFF;
+    border: none;
+  }
+  
+  .see-images-btn:hover {
+    background: #3c319c;
+  }
+  
+  .enquire-btn {
+    background: #FFFFFF;
+    color: #463AA1;
+    border: 1px solid #463AA1;
+  }
+  
+  .enquire-btn:hover {
+    background: #F9FAFB;
+  }
+  
+  /* Footer */
+  .footer {
+    background-color: #2d2f31;
+    color: #ffffff;
+    padding: 25px 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+    max-height: 500px;
+    overflow: hidden;
+}
+
+.container {
+    /* max-width: 1200px; */
+    /* margin: 0 auto; */
+    padding-top: 6px;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.footer-left {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.iskcon-logo {
+    width: 80px;
+    height: auto;
+}
+
+.footer-info h2 {
+    font-size: 22px;
+    margin: 0 0 8px 0;
+    font-weight: 500;
+}
+
+.footer-info p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #ffffff;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+.founder-title {
+    font-size: 22px;
+    margin: 0 0 8px 0;
+    font-weight: 500;
+}
+
+.founder-name {
+    font-size: 14px;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.founder-img {
+    width: 80px;
+    height: auto;
+    margin-left: 15px;
+    vertical-align: top;
+}
+
+.divider {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 20px 0;
+}
+
+.head-office {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.head-office h3 {
+    font-size: 22px;
+    margin: 0 0 10px 0;
+    font-weight: 500;
+}
+
+.head-office p {
+    margin: 3px 0;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.copyright {
+    font-size: 13px;
+}
+
+.footer-email a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.footer-policies a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 12px;
+}
+
+.social-icons a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.social-icons img {
+    width: 18px;
+    height: 18px;
+    transition: opacity 0.3s ease;
+}
+
+.social-icons a:hover img {
+    opacity: 0.8;
+}
+  
+  /* Tablet and smaller desktop screens */
+@media screen and (max-width: 1024px) {
+    .header-content {
+      padding: 0 24px;
+    }
+  
+    .breadcrumb-container {
+      padding: 0 24px;
+    }
+  
+    .main-content {
+      padding: 24px;
+    }
+  
+    .halls-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+  
+    .nav-links {
+      gap: 24px;
+    }
+  }
+  
+  /* Medium tablets and large mobile */
+  @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1024px) {
+        .header-content {
+          padding: 0 24px;
+        }
+      
+        .search-container {
+          max-width: 480px;
+        }
+      }
+      
+      @media screen and (max-width: 768px) {
+        .header {
+          height: 70px;
+        }
+      
+        .header-content {
+          padding: 0 16px;
+          gap: 16px;
+        }
+      
+        .logo {
+          height: 35px;
+        }
+      
+        .search-container {
+          max-width: none;
+        }
+      
+        .search-input {
+          height: 40px;
+          font-size: 14px;
+        }
+      
+        .mobile-menu-button {
+          display: block;
+        }
+      
+        .nav-links {
+          position: fixed;
+          top: 0;
+          right: -280px;
+          width: 280px;
+          height: 100vh;
+          background: white;
+          padding: 80px 24px 24px;
+          flex-direction: column;
+          align-items: stretch;
+          z-index: 999;
+          transition: right 0.3s ease;
+          box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+        }
+      
+        .nav-links.active {
+          right: 0;
+        }
+      
+        .mobile-menu-overlay.active {
+          display: block;
+        }
+      
+        .nav-link {
+          display: block;
+          padding: 12px 16px;
+          text-align: left;
+          width: 100%;
+        }
+      
+        .mobile-menu-button {
+          position: relative;
+          z-index: 1000;
+        }
+      }
+      
+      @media screen and (max-width: 480px) {
+        .header {
+          height: 60px;
+        }
+      
+        .header-content {
+          padding: 0 12px;
+          gap: 12px;
+        }
+      
+        .logo {
+          height: 30px;
+        }
+      
+        .search-icon {
+          left: 12px;
+          width: 16px;
+          height: 16px;
+        }
+      
+        .search-input {
+          height: 36px;
+          padding: 0 12px 0 36px;
+          font-size: 13px;
+        }
+      
+        .nav-link {
+          font-size: 14px;
+          padding: 10px 14px;
+        }
+      
+        .hamburger-icon {
+          width: 20px;
+          height: 20px;
+        }
+      }
+      
+      /* Touch device optimizations */
+      @media (hover: none) {
+        .nav-link:active {
+          background: #F3F4F6;
+        }
+      }
+  
+    .halls-grid {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+  
+    .hall-card {
+      max-width: 100%;
+    }
+  
+    .hall-name {
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
+  
+    .action-buttons {
+      flex-direction: column;
+      gap: 12px;
+    }
+  
+    .see-images-btn,
+    .enquire-btn {
+      width: 100%;
+      padding: 12px;
+      text-align: center;
+    }
+  }
+  
+  /* Small mobile devices */
+  @media screen and (max-width: 480px) {
+    .header {
+      height: 60px;
+    }
+  
+    .header-content {
+      padding: 0 12px;
+      gap: 16px;
+    }
+  
+    .logo {
+      height: 30px;
+    }
+  
+    .search-icon {
+      left: 12px;
+      width: 16px;
+      height: 16px;
+    }
+  
+    .search-input {
+      height: 36px;
+      padding: 0 12px 0 36px;
+      font-size: 13px;
+    }
+  
+    .location-text {
+      right: 12px;
+      font-size: 13px;
+    }
+  
+    .breadcrumb-container {
+      padding: 0 12px;
+    }
+  
+    .breadcrumb-link,
+    .separator,
+    .breadcrumb-current,
+    .main-mandir-link {
+      font-size: 12px;
+    }
+  
+    .main-content {
+      padding: 16px 12px;
+    }
+  
+    .image-grid {
+      padding: 8px;
+    }
+  
+    .small-images {
+      height: 100px;
+    }
+  
+    .hall-info {
+      padding: 16px;
+    }
+  
+    .capacity,
+    .facilities,
+    .location {
+      font-size: 13px;
+      margin-bottom: 6px;
+    }
+  
+    .play-icon {
+      width: 36px;
+      height: 36px;
+    }
+  
+    .footer {
+      height: 56px;
+    }
+  
+    .footer p {
+      font-size: 12px;
+    }
+  }
+  
+  /* For devices with hover capability */
+  @media (hover: hover) {
+    .nav-link:hover {
+      color: #463AA1;
+    }
+  
+    .breadcrumb-link:hover {
+      color: #463AA1;
+    }
+  
+    .play-button:hover {
+      background: rgba(0, 0, 0, 0.4);
+    }
+  
+    .see-all-button:hover {
+      background: rgba(0, 0, 0, 0.6);
+    }
+  
+    .see-images-btn:hover {
+      background: #3c319c;
+    }
+  
+    .enquire-btn:hover {
+      background: #F9FAFB;
+    }
+  }
+  
+  /* For touch devices */
+  @media (hover: none) {
+    .nav-link:active,
+    .breadcrumb-link:active,
+    .main-mandir-link:active {
+      color: #463AA1;
+    }
+  
+    .play-button:active,
+    .see-all-button:active {
+      background: rgba(0, 0, 0, 0.4);
+    }
+  
+    .see-images-btn:active {
+      background: #3c319c;
+    }
+  
+    .enquire-btn:active {
+      background: #F9FAFB;
+    }
+  }
+  
+  /* For landscape orientation on mobile */
+  @media screen and (max-height: 480px) and (orientation: landscape) {
+    .header {
+      height: 56px;
+    }
+  
+    .halls-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .small-images {
+      height: 80px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .footer {
+        max-height: none; /* Remove max-height on mobile for better readability */
+    }
+    
+    .footer-top {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .footer-right {
+        text-align: left;
+        margin-left: 95px;
+    }
+    .founder-img{
+        margin-left: -90px;
+        margin-top: -70px;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .social-icons {
+        justify-content: center;
+    }
+}
