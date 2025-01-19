@@ -99,6 +99,8 @@
   .nav-link:hover {
     color: #463AA1;
   }
+
+  
   
   .mobile-menu-button {
     display: none;
@@ -177,6 +179,7 @@
     overflow: hidden;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     width: 100%;
+    height: fit-content;
     max-width: 280px;
     margin: 0 auto;
   }
@@ -277,7 +280,7 @@
   
   .action-buttons {
     display: flex;
-    gap: 12px;
+    gap: 72px;
     margin-top: 16px;
   }
   
@@ -322,7 +325,8 @@
 }
 
 .container {
-    /* max-width: 1200px; */
+  width: 100%;
+    max-width: 1200px;
     /* margin: 0 auto; */
     padding-top: 6px;
 }

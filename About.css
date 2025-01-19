@@ -1,4 +1,4 @@
-* {
+.abt-wrapper {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -11,24 +11,24 @@
     height: 100vh;
 }
 
-nav {
-    /* padding: 20px; */
+.abt-nav {
+    padding-right: 20px;
     border-right: 1px solid #ddd;
     display: flex;
     flex-direction: column;
 
 }
 
-nav ul {
+.abt-nav ul {
     list-style: none;
 }
 
-nav ul li {
+.abt-nav ul li {
     margin-top: 20px;
     margin-bottom: 15px;
 }
 
-nav ul li a {
+.abt-nav ul li a {
     text-decoration: none;
     color: black;
     font-size: 16px;
@@ -39,13 +39,13 @@ nav ul li a {
     transition: background-color 0.3s, color 0.3s;
 }
 
-nav ul li a.active {
+.abt-nav ul li a.active {
     background-color: #f0e5ff;
     color: purple;
 
 }
 
-nav ul li a:hover {
+.abt-nav ul li a:hover {
     background-color: #e8e8e8;
 }
 
@@ -88,7 +88,7 @@ main {
         flex-direction: column;
     }
 
-    nav {
+    .abt-nav {
         width: 100%;
         height: auto;
         border-right: none;
