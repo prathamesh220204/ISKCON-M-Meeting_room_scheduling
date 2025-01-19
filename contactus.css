@@ -7,25 +7,30 @@
 }
 
 .hero::before {
-  content: ""; /* Necessary to make the pseudo-element visible */
+  content: "";
+  /* Necessary to make the pseudo-element visible */
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); /* Blackish fade */
-  z-index: 1; /* Ensures it overlays the image */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  /* Blackish fade */
+  z-index: 1;
+  /* Ensures it overlays the image */
 }
 
 .hero::after {
-  content: ""; 
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 30%; /* Adjust height for the fade area */
-  background: linear-gradient(to top, rgba(255, 255, 255, 0.), rgba(255, 255, 255, 0)); /* Whitish fade */
-  z-index: 2; 
+  height: 30%;
+  /* Adjust height for the fade area */
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.), rgba(255, 255, 255, 0));
+  /* Whitish fade */
+  z-index: 2;
 }
 
 .title-text {
@@ -40,7 +45,7 @@
   font-family: Arial, Helvetica, sans-serif;
   text-shadow: 0 0 2px #ffffff,
     0 0 10px #ffffff;
-    z-index: 50;
+  z-index: 50;
 }
 
 .daddy {
@@ -214,4 +219,3 @@ textarea {
   background-color: #3a2271;
   color: #fff;
 }
-

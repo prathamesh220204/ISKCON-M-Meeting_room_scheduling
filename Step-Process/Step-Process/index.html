@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking Page</title>
+  <link rel="stylesheet" href="BookingPage.css">
+  <link rel="stylesheet" href="/boooking/Book.css">
+</head>
+<body>
+  <header class="header">       
+    <div class="header-content">         
+      <img src="https://iskconmumbaipull-21250.kxcdn.com/bi_theme_snippets/static/src/img/logo-black-header.png"
+      alt="ISKCON Juhu Logo" class="logo">                  
+      
+      <div class="search-container">           
+        <div class="search-wrapper">             
+          <svg xmlns="http://www.w3.org/2000/svg"
+               class="search-icon"
+               viewBox="0 0 24 24"                
+               fill="none"
+               stroke="currentColor"
+               stroke-width="2"
+               stroke-linecap="round"
+               stroke-linejoin="round">               
+            <circle cx="11" cy="11" r="8"></circle>               
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>             
+          </svg>             
+          <input type="text"
+                 placeholder="Search for a Hall or Venue"
+                 class="search-input">           
+        </div>         
+      </div>          
+  
+      <!-- Hamburger button moved outside nav-links -->
+      <button class="mobile-menu-button">             
+        <svg viewBox="0 0 24 24" 
+             class="hamburger-icon"
+             stroke="currentColor"
+             fill="none">               
+          <path stroke-linecap="round" 
+                stroke-linejoin="round" 
+                stroke-width="2" 
+                d="M4 6h16M4 12h16M4 18h16">
+          </path>             
+        </svg>           
+      </button>
+  
+      <!-- Navigation links -->
+      <nav class="nav-links">           
+        <a href="#" class="nav-link">Login</a>           
+        <a href="#" class="nav-link">Sign Up</a>           
+      </nav>       
+    </div>     
+  </header>
+
+<!-- Sub-header -->
+<div class="sub-header">
+  <div class="breadcrumb-container">
+    <nav class="breadcrumb">
+      <a href="#" class="breadcrumb-link">Home</a>
+      <span class="separator">•</span>
+      <a href="#" class="breadcrumb-link">ISKCON Juhu</a>
+      <span class="separator">•</span>
+      <span class="breadcrumb-current">Meeting Halls</span>
+    </nav>
+    <a href="#" class="main-mandir-link">Main Mandir</a>
+  </div>
+</div>
+  <div class="booking-page">
+    <div class="container">
+      <div class="header">
+        <h2>Select Time</h2>
+        <button class="icon-button" onclick="closeBooking()">
+          ✖
+        </button>
+      </div>
+      <div class="mini-container">
+        <div class="tabs">
+          <div class="tabs-list">
+            <button class="tab active" onclick="switchView('day')">Day View</button>
+            <button class="tab" onclick="switchView('calendar')">Calendar View</button>
+          </div>
+
+          <!-- Day View -->
+          <div class="day-view" id="day-view">
+            <div class="date-scroll">
+              <button class="icon-button" onclick="scrollDates(-1)">
+                ◀
+              </button>
+              <div id="date-buttons"></div>
+              <button class="icon-button" onclick="scrollDates(1)">
+                ▶
+              </button>
+            </div>
+
+            <div class="time-slots" id="time-slots">
+              <!-- Time slots will be dynamically generated -->
+            </div>
+          </div>
+
+          <!-- Calendar View -->
+          <div class="calendar-view" id="calendar-view" style="display: none;">
+            <div class="calendar">
+              📅
+              <p>Calendar view implementation would go here</p>
+              <p id="selected-date">Selected Date: January 1, 2025</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="details-card">
+          <div class="venue-details">
+            <img
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-8oDpEui8Pp3smda7Vwt5dgNb7pjTBu.png"
+              alt="Meeting Hall"
+              class="venue-image"
+            />
+            <div class="venue-info">
+              <h3>Meeting Hall 101</h3>
+              <p class="venue-location">Ground Floor, Building A</p>
+              <p class="booking-time" id="booking-time">
+                Monday, January 1 - <span>3:00pm to 4:30pm</span>
+              </p>
+            </div>
+          </div>
+          <button class="continue-button" onclick="window.location.href='/services/Select_services.html';">Continue</button>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+          <div class="footer-top">
+              <div class="footer-left">
+                  <img src="//iskconmumbaipull-21250.kxcdn.com/bi_theme_snippets/static/src/img/footer-logo.jpg" alt="ISKCON Logo" class="iskcon-logo">
+                  <div class="footer-info">
+                      <h2>ISKCON</h2>
+                      <p>International Society for Krishna Consciousness</p>
+                      <p>Hare Krishna land, Juhu, Mumbai - 400049</p>
+                  </div>
+              </div>
+              <div class="footer-right">
+                  <h2 class="founder-title">Founder-Acharya</h2>
+                  <p class="founder-name">His Divine Grace</p>
+                  <p class="founder-name">A.C. Bhaktivedanta Swami Prabhupada</p>
+                  <img src="//iskconmumbaipull-21250.kxcdn.com/bi_theme_snippets/static/src/img/author-iskcon.jpg" alt="Founder" class="founder-img">
+              </div>
+          </div>
+  
+          <hr class="divider">
+  
+          <div class="head-office">
+              <h3>Head Office of ISKCON India</h3>
+              <p>Hare Krishna Land, Juhu, Mumbai-400049, India</p>
+              <p>Registered under Maharashtra Public Trust Act 1950</p>
+              <p>vide Registration No. F-2179 (Bom)</p>
+          </div>
+  
+          <hr class="divider">
+  
+          <div class="footer-bottom">
+              <div class="copyright">© 2024 ISKCON Juhu Mumbai</div>
+              <div class="footer-email">
+                  <a href="mailto:info@iskconmumbai.com">info@iskconmumbai.com</a>
+              </div>
+              <div class="footer-policies">
+                  <a href="/policies">Policies of Usage</a>
+              </div>
+              <div class="social-icons">
+                  <a href="https://www.facebook.com/iskconjuhu" target="_blank">
+                      <img src="./assets/assets/fb.png" alt="Facebook">
+                  </a>
+                  <a href="https://twitter.com/ISKCONJuhu" target="_blank">
+                      <img src="./assets/assets/x.png" alt="Twitter">
+                  </a>
+                  <a href="https://www.youtube.com/channel/UC1vJ4RlWSHP6n0xL2G1tkYQ" target="_blank">
+                      <img src="./assets/assets/yt.png" alt="YouTube">
+                  </a>
+                  <a href="https://www.instagram.com/iskcon_juhumumbai/" target="_blank">
+                      <img src="./assets/assets/ig.png" alt="Instagram">
+                  </a>
+              </div>
+          </div>
+      </div>
+  </footer>
+  </div>
+
+  <script src="./index.js"></script>
+</body>
+</html>

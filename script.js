@@ -20,13 +20,12 @@ const slides = [
         description: 'Krishna is most pleased when He honours foodstuff prepared by Srimati Radharani.Receive the blessings of Krishna and Radharani',
         date: '13 Jan 2025 - 26 Feb 2025'
     }
-    // Add more slides here
+    
 ];
 function updateSlide(direction) {
     slideIndex = (slideIndex + direction + slides.length) % slides.length;
     const slide = slides[slideIndex];
     
-    // Update content
     document.querySelector('h1').textContent = slide.title;
     document.querySelector('.description').textContent = slide.description;
     document.querySelector('.date').innerHTML = `
